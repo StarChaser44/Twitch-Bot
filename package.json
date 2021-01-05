@@ -1,0 +1,21 @@
+{
+  "name": "twitchbot",
+  "version": "1.0.0",
+  "description": "Simple twitch bot",
+  "main": "bot.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tyree",
+  "license": "ISC",
+  "dependencies": {
+    "tmi.js": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.19",
+    "@types/tmi.js": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.16.0"
+  }
+}
