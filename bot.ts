@@ -1,3 +1,4 @@
+const { bot_auth } = require('./config');
 import {toggleEmoteMode, timeoutUser, followerOnlyToggle} from './BotModeration'
 import { getFunFact } from './FunFactAPIComm'
 import './DestinyAPIComm'
@@ -6,13 +7,11 @@ const tmi = require('tmi.js');
 const opts = {
   identity: {
     username: 'llamalavabot',
-    password: 'oauth:',
+    password: `oauth:${bot_auth}`,
   },
   channels: [ 'starlessjupiter'] 
 }
-// const Destiny_Two_API_Key = '94e8dc99ed2444a4b01c23153bb11065';
-// const Bungie_Auth_URL = 'https://www.bungie.net/en/OAuth/Authorize';
-// const Bungie_Server_Endpoint = 'www.bungie.net';
+
 export const client = new tmi.client(opts);
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);

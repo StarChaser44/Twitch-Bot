@@ -31,11 +31,12 @@ if(emoteOnly == false) {
         emoteOnly = false;
         client.emoteonlyoff(channel_name)
         .then((data) => {
-        client.say(channel_name, 'The chat has left emote only mode');
-        console.log('The chat has left emote only mode');
+            console.log(data);
+            client.say(channel_name, 'The chat has left emote only mode');
+            console.log('The chat has left emote only mode');
         }).catch((err) => {
-        console.log('There was an error leaving emote only mode');
-        console.error(err);
+            console.log('There was an error leaving emote only mode');
+            console.error(err);
         });
     }
 }
